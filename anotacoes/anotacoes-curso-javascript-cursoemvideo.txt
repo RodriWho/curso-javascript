@@ -1,0 +1,120 @@
+Modulo A
+
+- Comandos " Disparar " Janelas
+	window.alert('Bem-Vindo')    // Criar um Alerta*/
+	window.confirm('Continuar?')    // Solicitar uma confirmação do usuario */
+	window.prompt('Qual é seu nome?')    // Abrir um prompt para o usuario digitar algo */
+
+Modulo B
+
+- Variaveis e Tipos Primitivos
+
+	number // O JS não diferencia valores numericos Inteiros (Int) e numericos Reais (Float)
+		infinity
+		NaN
+	string // Não ha difereça entre (""), ('') e (´´)
+	boolean // funciona padrão, true e false
+	null
+	undefined
+	object
+		array
+	function
+
+	// Para caso queira saber o tipo de uma variavel utilizar   typeof
+
+- Tratamento de Dados
+
+	// JavaScript é Case Sensitivi, ou seja, diferencia Maiusculas de minusculas
+	//  Por padrão | window.prompt() | recebe o valor digitado como string.
+	// Para converter o valor ultilize os comando a baixo.
+
+		Number.parseInt(n)   // Faz a conversão de um numero para inteiro
+		Number.parseFloat(n)  // conversão para numero Real (Float)
+		Number(n)  // o proprio JS decidi se é Int ou Float
+
+	// Para conversão de number para string.
+		
+		n.toString() // converte um valor do tipo number, para string
+		String(n) // funcionam da mesma forma
+	
+	// Formatando Strings
+		var s = 'JavaScript'
+		'Estou aprendendo s'    // Não faz interpolação
+		'Estou aprendendo ' + s   // Usa concatenação
+		`Estou aprendendo ${s}`   // Usa template string
+
+		s.length  // Quantos caracteres a string tem
+		s.toUpperCase()  // Tudo para MAIUSCULAS
+		s.toLowerCase()  // Tudo para minusculas
+
+		document.write()  // Comando para escrever na tela, ou body (Corpo do HTML) sem quebra de linha
+		document.writeln()  // Com Quebra de Linha
+	
+	// Formatando numeros
+		n.toFixed()  // define quantas casas decimais após o ponto(.) serão exibidas
+		n.replace( 'a' , '1')  // trocar um caracter por outro, a por 1
+		n.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})  // o comando localiza para pt-br(Brasil), currency indentifica que o estilo e dinheiro, e tambem qual o tipo da moeda BRL(Real) 
+
+- Operadores
+		aritmeticos
+			+ adição 
+			- subtração
+			* multiplicação
+			/ divisão real
+			% divisão inteira
+			** potencia
+
+			precedencia
+					()
+					**
+					* / %
+					+ - 
+
+		atribuição
+			atribuição simples
+				n = 3 // n vale 3
+				n = 5 // n vale 5
+
+			auto-atribuição
+				n = 3
+				n = n + 4 // n vale 7
+				n += 4 // n = n + 4 
+
+			incremento
+				n = 4 
+				n++ // n + 1  pos-incremento
+				++n // 1 + n pre-incremento
+			decremento
+				n = 4
+				--n // 1 - n pre-incremento
+				n-- // n - 1 pos- incremento
+
+		relacionais
+			> maior
+			< menor
+			>= maior igual
+			<= menor igual
+			== igual
+			!= diferente ou não igual 
+
+		logicos
+			predecencia
+				!  negação
+				&& conjunção / e
+				|| disjunção / ou
+
+		ternario
+			? : 
+			teste logico ?  true : false
+			média >= 7.0 ? "Aprovado" : "Reprovado"
+			se true retorna Aprovado, se false retorna Reprovado
+
+Modulo C 
+
+- introdução ao DOM
+		
+- eventos DOM
+
+Modulo D 
+
+- Condições

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Programa</title>
+    <style>
+        body { /* comentario em CSS */
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(21, 143, 143);
+            color: black;
+            text-align: center;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.658);
+            margin: auto;
+        }
+
+        main {
+            max-width: 400px;
+            padding: 10px;
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.514);
+            border-radius: 10px;
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Olá, Mundo!</h1> <!-- Comentario em HTML -->
+        <p>Olha nois ai denovo!</p>
+    </main>
+    <script> // Comentario em JavaScript
+        var n1 = Number(window.prompt('Digite um nmero: ')) // receber o valor digitado pelo usuario, e converte-lo de string para number, depois armazena-lo na variavel n1
+
+        var n2 = Number(window.prompt('Digite outro número: ')) // receber o valor digitado pelo usuario, e converte-lo de string para number, depois armazena-lo na variavel n2
+
+        var soma = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`) 
+    </script>
+</body>
+</html>
