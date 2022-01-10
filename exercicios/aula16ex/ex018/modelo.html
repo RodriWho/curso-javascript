@@ -13,16 +13,14 @@
     </header>
     <section>
         <div>
-            <p>Número (entre 0 e 100) <input type="number" name="numero" id="txtN"> <input type="button" value="Adicionar" onclick="adicionar()"></p>
+            Número (entre 1 e 100)
+            <input type="number" name="fnum" id="fnum">
+            <input type="button" value="Adicionar" onclick="adicionar()">
+            <br> <select name="flista" id="flista" size="6"></select>
+            <input type="button" value="Finalizar" onclick="Finalizar()">
         </div>
-        <div>
-            <p>
-                <select name="seletor" id="txtS" size="6">
-                    <option>Seletor</option>
-                </select>
-            </p>
-            <input type="button" value="Finalizar" onclick="finalizar()">
-            <p id="pFin"></p>
+        <div id="res">
+
         </div>
     </section>
     <footer>

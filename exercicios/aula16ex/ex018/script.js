@@ -1,52 +1,28 @@
-let vetor = [] // Criar vetor vazio
-let soma = 0
+let num = document.getElementById('num')
+let lista = document.getElementById('flista')
+let res = document.getElementById('res')
+let valores = []
+
+function isNumero(n) { // Verificar se esta nos parametros de 1 e 100
+    if (Number(n) >= 1 && Number(n) <= 100) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function inLista(n, l) {
+    if (l.indexOf(Number(n)) != -1) {
+        return true
+    } else {
+        return false
+    }
+}
 
 function adicionar() {
-    let numero = document.getElementById('txtN')
-    let tab = document.getElementById('txtS')
-    let pFin = document.getElementById('pFin')
-    n = Number.parseInt(numero.value)
-
-    let pos = vetor.indexOf(n) // Buscar valor n no vetor
-
-    if (n == '') { // Verificar se caixa esta vazia ao clicar em Adicionar
-        alert(`Digite um valor na caixa`)
+    if (isNumero(num.value) && !inLista(num.value, valores)) {
+        window.alert('Tudo Ok')
     } else {
-        if (n < 0 || n > 100) { // Verificar se valor digitado esta nos parametros 0 e 100
-            alert(`O valor ${n} é Invalido`)
-        } else {
-            if (pos == -1) { // Verificar se valor ja registrado
-                pFin.innerHTML = ''
-                vetor.push(n)
-                let item = document.createElement('option')
-                item.text = `Valor ${n} Adicionado`
-                tab.appendChild(item)
-            } else {
-                alert(`O valor ${n} já existe no registro`)
-            }
-        }
-    }
-}
-
-function finalizar() {
-    if (vetor == '') { // Verificar se foi adicionado valor ao vetor ao clicar em finalizar
-        alert('Adicione um valor na caixa!')
-    } else {
-        pFin.innerHTML = ''
-        vetor.sort()
-        somar()
-        pFin.innerHTML += `${vetor} <br>
-        Total Cadastrados: ${vetor.length} <br>
-        Maior valor cadastrado ${vetor[vetor.length -1]} <br>
-        Menor valor cadastrado ${vetor[0]} <br>
-        A soma dos valores é ${soma} <br>
-        A média total é ${soma / vetor.length}`
-    }
-    soma = 0
-}
-
-function somar() {
-    for(let c = 0 ; c < vetor.length ; c++) {
-        soma += vetor[c]
+        window.alert(' Valor invalido ou ja encontrado na lista.')
     }
 }
